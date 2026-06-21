@@ -137,7 +137,7 @@ class SnakeGameAI:
 
         if np.array_equal(action,[1,0,0]):
             new_dir = clock_wise[idx] # no change
-        elif np.array_equal(action.[0.1,0]):
+        elif np.array_equal(action,[0.1,0]):
             next_idx = (idx + 1) % 4
             new_dir = clock_wisen[next_idx] #right turn r -> d -> l -> u
         else:
@@ -160,17 +160,3 @@ class SnakeGameAI:
         self.head = Point(x, y)
             
 
-if __name__ == '__main__':
-    game = SnakeGame()
-    
-    # game loop
-    while True:
-        game_over, score = game.play_step()
-        
-        if game_over == True:
-            break
-        
-    print('Final Score', score)
-        
-        
-    pygame.quit()
