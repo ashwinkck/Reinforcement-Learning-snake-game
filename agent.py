@@ -11,7 +11,12 @@ LR = 0.001
 class Agent:
 
     def __init__(self):
-        pass
+        self.n_games = 0
+        self.epsilon = 0 #parameter to control the randomness
+        self.gamma = 0 # Discount rate
+        self.memory = deque(maxlen=MAX_MEMORY) # popleft()
+        
+
 
 
     def get_state(self,game):
