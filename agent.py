@@ -40,7 +40,10 @@ class Agent:
             (dir_d and game.is_collision(point_d)),
 
             #if the danger is right
-            
+            (dir_u and game.is_collision(point_r)) or 
+            (dir_d and game.is_collision(point_l)) or 
+            (dir_l and game.is_collision(point_u)) or 
+            (dir_r and game.is_collision(point_d)),
         ]
         
 
