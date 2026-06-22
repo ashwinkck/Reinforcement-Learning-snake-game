@@ -20,8 +20,14 @@ class Agent:
 
 
     def get_state(self,game):
-        pass
+        head = game.snake[0]
+        # down there 4 points around the head
+        point_l = Point(head.x - 20, head.y) #20 is the block size in the game
+        point_r = Point(head.x + 20, head.y)
+        point_u = Point(head.x, head.y - 20)
+        point_d = Point(head.x, head.y + 20)
 
+        
 
     def remember(self, state,action, reward, next_state, done):
         pass
