@@ -64,6 +64,24 @@ def train():
 
 
         #remember
-        agent
+        agent.remember(state_old, final_move, reward, state_new,done)
+
+        if done:
+            # train the long memory (Experienced replay), plot result
+            game.reset()
+            agent.n_games += 1
+            agent.train_long_memory()
+
+
+            if score > record:
+                record = score
+                # agent.model.save()
+
+            print('Game',agent.n_games,'Score',score, 'Record:',record)
+
+
+            
+
+
 if __name__ == 'main':
     train()
