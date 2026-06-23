@@ -137,7 +137,7 @@ class SnakeGameAI:
 
         if np.array_equal(action,[1,0,0]):
             new_dir = clock_wise[idx] # no change
-        elif np.array_equal(action,[0.1,0]):
+        elif np.array_equal(action,[0,1,0]):
             next_idx = (idx + 1) % 4
             new_dir = clock_wise[next_idx] #right turn r -> d -> l -> u
         else:
