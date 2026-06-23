@@ -89,7 +89,8 @@ class Agent:
         self.trainer.train_step(state, action, reward, next_state, done)
 
     def get_action(self,state):
-        pass
+        # random moves also called as tradeoff exploration/ exploitation
+        
 
 
 def train():
