@@ -75,7 +75,7 @@ class Agent:
     
     def train_long_memory(self):
         if len(self.memory) > BATCH_SIZE:
-            mini_sample = random.mini_sample(self.memory, BATCH_SIZE) # list of tuples
+            mini_sample = random.sample(self.memory, BATCH_SIZE) # list of tuples
         else:
             mini_sample = self.memory
        
@@ -150,5 +150,5 @@ def train():
             
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     train()
