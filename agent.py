@@ -69,7 +69,7 @@ class Agent:
 
 
     def remember(self, state,action, reward, next_state, done):
-        pass
+        self.memory.append(state,action, reward, next_state, done) # if it exceeds the max memory popleft if MAX_MEMORY is reached
 
     
     def train_long_memory(self):
