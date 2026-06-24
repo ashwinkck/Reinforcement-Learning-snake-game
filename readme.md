@@ -36,10 +36,31 @@ The training process utilizes the Bellman Equation to update Q-values. The model
 
 - `agent.py`: Contains the main reinforcement learning logic, state extraction, and the training loop.
 - `model.py`: Defines the PyTorch Neural Network (`Linear_QNet`) and the Q-Learning trainer (`QTrainer`).
+- `agent_cuda.py` & `model_cuda.py`: CUDA-enabled versions of the agent and model for GPU training.
 - `snakegame.py`: The Pygame environment built for the AI to interact with.
 - `snake_game_human.py`: A playable version of the game for humans.
 - `helper.py`: Utility functions for plotting the training progress.
 
+## How to Run
+
+### Play as Human
+To play the game yourself:
+```bash
+python snake_game_human.py
+```
+
+### Train the AI (CPU)
+To start training the AI agent on the CPU:
+```bash
+python agent.py
+```
+
+### Train the AI (GPU / CUDA)
+To start training the AI agent utilizing CUDA/GPU for faster computation:
+```bash
+python agent_cuda.py
+```
+As it trains, it will display a live plot of its scores and the model will be saved in the `model/` directory when a new high score is reached.
 
 
 ## Dependencies
