@@ -2,7 +2,7 @@
 
 This project implements an AI agent that learns to play the classic Snake game using Reinforcement Learning. It uses Deep Q-Learning built with PyTorch and Pygame for the game environment.
 
-[**Watch the Demo / Tutorial here**](https://youtu.be/nkyZy1dDn38?si=YlgacBKv51QX8C8q)
+[**Watch the Demo **](https://youtu.be/nkyZy1dDn38?si=YlgacBKv51QX8C8q)
 
 ## Overview
 
